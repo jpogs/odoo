@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates xml:space="preserve">
+
+<t t-name="pos_table_timer.TableTimer" owl="1">
+    <div style="font-weight:bold;">
+        <t t-set="sec" t-value="props.order.getTableDurationSeconds()" />
+        ⏱
+        <t t-esc="Math.floor(sec / 3600)" /> :
+        <t t-esc="Math.floor((sec % 3600) / 60)" /> :
+        <t t-esc="sec % 60" />
+    </div>
+</t>
+
+</templates>
